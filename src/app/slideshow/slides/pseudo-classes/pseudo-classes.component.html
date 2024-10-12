@@ -1,0 +1,60 @@
+<div class="flex flex-col gap-24 p-24">
+  <h1 class="text-6xl">Pseudo classes</h1>
+
+  <p class="text-3xl">
+    Pseudo classes can be used to style elements based on their state
+  </p>
+
+  <div class="flex flex-col gap-2">
+    <button
+      class="max-w-32 rounded bg-red-600 px-2 py-1 text-2xl hover:bg-yellow-500"
+    >
+      Click me!
+    </button>
+
+    <pre class="max-w-5xl rounded-lg">
+        <code class="language-html">
+&lt;button class="max-w-32 rounded bg-red-600 px-2 py-1 text-2xl hover:bg-yellow-500"&gt;Click me!&lt;/button&gt;
+        </code>
+    </pre>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <ul class="flex flex-row gap-8 text-xl font-bold">
+      @for (person of people(); track $index) {
+        <li class="first:text-orange-500 last:text-lime-500">{{ person }}</li>
+      }
+    </ul>
+    <pre class="max-w-5xl rounded-lg">
+        <code class="language-html">
+&lt;ul class="flex flex-row gap-8 text-xl font-bold"&gt;
+    #Iterate through people
+    &lt;li class="first:text-orange-500 last:text-lime-500"&gt;person.name&lt;/li&gt;
+&lt;/ul&gt;
+        </code>
+    </pre>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <form class="flex flex-col gap-1">
+      <label class="font-bold">Email:</label>
+      <input
+        class="max-w-64 rounded p-2 text-black invalid:text-red-500 invalid:ring-red-500"
+        type="email"
+        placeholder="Enter your email address"
+      />
+    </form>
+    <pre class="max-w-5xl rounded-lg">
+        <code class="language-html">
+&lt;form class=&quot;flex flex-col gap-1&quot;&gt;
+    &lt;label class=&quot;font-bold&quot;&gt;Email:&lt;/label&gt;
+    &lt;input
+    class=&quot;max-w-64 rounded p-2 text-black invalid:text-red-500 invalid:ring-red-500&quot;
+    type=&quot;email&quot;
+    placeholder=&quot;Enter your email address&quot;
+    /&gt;
+&lt;/form&gt;
+        </code>
+    </pre>
+  </div>
+</div>

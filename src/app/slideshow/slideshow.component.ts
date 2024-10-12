@@ -8,6 +8,7 @@ import { TitleSlideComponent } from './slides/title-slide/title-slide.component'
 import { ContentsComponent } from './slides/contents/contents.component';
 import { CustomThemeComponent } from './slides/custom-theme/custom-theme.component';
 import { AboutMeComponent } from './slides/about-me/about-me.component';
+import { PseudoClassesComponent } from './slides/pseudo-classes/pseudo-classes.component';
 
 @Component({
   selector: 'app-slideshow',
@@ -17,6 +18,7 @@ import { AboutMeComponent } from './slides/about-me/about-me.component';
     ContentsComponent,
     CustomThemeComponent,
     AboutMeComponent,
+    PseudoClassesComponent,
   ],
   templateUrl: './slideshow.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
