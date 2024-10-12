@@ -12,4 +12,10 @@ export class PseudoClassesComponent {
     <&sol;button>`);
 
   protected people = signal<string[]>(['Sarah', 'Joshua', 'Emily', 'Martin']);
+
+  protected showDancingDog = signal<boolean>(false);
+
+  protected onTemptingButtonClicked() {
+    this.showDancingDog.set(true);
+  }
 }
