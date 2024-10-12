@@ -9,6 +9,7 @@ import { ContentsComponent } from './slides/contents/contents.component';
 import { CustomThemeComponent } from './slides/custom-theme/custom-theme.component';
 import { AboutMeComponent } from './slides/about-me/about-me.component';
 import { PseudoClassesComponent } from './slides/pseudo-classes/pseudo-classes.component';
+import { AboutTailwindComponent } from './slides/about-tailwind/about-tailwind.component';
 
 @Component({
   selector: 'app-slideshow',
@@ -19,6 +20,7 @@ import { PseudoClassesComponent } from './slides/pseudo-classes/pseudo-classes.c
     CustomThemeComponent,
     AboutMeComponent,
     PseudoClassesComponent,
+    AboutTailwindComponent,
   ],
   templateUrl: './slideshow.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
