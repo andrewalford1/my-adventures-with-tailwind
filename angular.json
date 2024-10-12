@@ -54,9 +54,12 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/prism.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/prism.js"
+            ]
           },
           "configurations": {
             "production": {
