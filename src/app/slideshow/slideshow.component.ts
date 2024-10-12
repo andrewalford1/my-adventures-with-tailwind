@@ -9,13 +9,13 @@ import { ContentsComponent } from '../contents/contents.component';
 import { CustomThemeComponent } from '../custom-theme/custom-theme.component';
 
 @Component({
-  selector: 'app-slides',
+  selector: 'app-slideshow',
   standalone: true,
   imports: [TitleSlideComponent, ContentsComponent, CustomThemeComponent],
-  templateUrl: './slides.component.html',
+  templateUrl: './slideshow.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class SlidesComponent implements AfterViewInit {
+export class SlideshowComponent implements AfterViewInit {
   public ngAfterViewInit() {
     register();
   }

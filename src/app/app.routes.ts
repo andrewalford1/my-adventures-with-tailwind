@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { SlidesComponent } from './slides/slides.component';
+import { SlideshowComponent } from './slideshow/slideshow.component';
 
 export const routes: Routes = [
   {
@@ -9,6 +9,6 @@ export const routes: Routes = [
   },
   {
     path: 'slides',
-    component: SlidesComponent,
+    component: SlideshowComponent,
   },
 ];
