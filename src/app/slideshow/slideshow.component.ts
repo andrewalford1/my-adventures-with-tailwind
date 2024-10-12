@@ -10,6 +10,7 @@ import { CustomThemeComponent } from './slides/custom-theme/custom-theme.compone
 import { AboutMeComponent } from './slides/about-me/about-me.component';
 import { PseudoClassesComponent } from './slides/pseudo-classes/pseudo-classes.component';
 import { AboutTailwindComponent } from './slides/about-tailwind/about-tailwind.component';
+import { CreditsComponent } from './slides/credits/credits.component';
 
 @Component({
   selector: 'app-slideshow',
@@ -21,6 +22,7 @@ import { AboutTailwindComponent } from './slides/about-tailwind/about-tailwind.c
     AboutMeComponent,
     PseudoClassesComponent,
     AboutTailwindComponent,
+    CreditsComponent,
   ],
   templateUrl: './slideshow.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
