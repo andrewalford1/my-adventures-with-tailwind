@@ -11,6 +11,7 @@ import { AboutMeComponent } from './slides/about-me/about-me.component';
 import { PseudoClassesComponent } from './slides/pseudo-classes/pseudo-classes.component';
 import { AboutTailwindComponent } from './slides/about-tailwind/about-tailwind.component';
 import { CreditsComponent } from './slides/credits/credits.component';
+import { TailwindBasicsComponent } from './slides/tailwind-basics/tailwind-basics.component';
 
 @Component({
   selector: 'app-slideshow',
@@ -23,6 +24,7 @@ import { CreditsComponent } from './slides/credits/credits.component';
     PseudoClassesComponent,
     AboutTailwindComponent,
     CreditsComponent,
+    TailwindBasicsComponent,
   ],
   templateUrl: './slideshow.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

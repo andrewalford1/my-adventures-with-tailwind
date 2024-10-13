@@ -1,0 +1,156 @@
+<div class="grid h-full grid-cols-2 gap-24 p-24">
+  <div class="flex flex-col gap-24">
+    <h1 class="text-6xl font-bold">Tailwind Basics</h1>
+    <p class="text-3xl">
+      By default, Tailwind removes all the default styling from your HTML.
+    </p>
+    <pre class="max-w-5xl rounded-lg bg-slate-700 px-4">
+      @if (showTailwindStyles()) {
+        <code class="text-wrap">
+&lt;section <span class="font-bold text-red-500">class="flex flex-col gap-8 p-4"</span>&gt;
+  &lt;h1 <span class="font-bold text-red-500">class="flex flex-col gap-8 p-4"</span>&gt;My super cool site&lt;/h1&gt;
+  &lt;p&gt;
+Hi, my name is Andrew. Welcome to my super cool website! Here is a list of all my favourite superheroes:
+  &lt;/p&gt;
+  &lt;ul <span class="font-bold text-red-500">class="list-disc pl-8"</span>&gt;
+    #Loop through all heroes.
+    &lt;li&gt;hero.name&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;See below to learn a little more about each one.&lt;/p&gt;
+  &lt;table <span class="font-bold text-red-500">class="text-left"</span>&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Hero&lt;/th&gt;
+      &lt;th&gt;Alter ego&lt;/th&gt;
+      &lt;th&gt;Location&lt;/th&gt;
+      &lt;th&gt;Main power&lt;/th&gt;
+    &lt;/tr&gt;
+    # Loop thorugh all heros
+    &lt;tr <span class="font-bold text-red-500">class="odd:bg-slate-400 odd:text-white"</span>&gt;
+      &lt;td&gt;hero.name&lt;/td&gt;
+      &lt;td&gt;hero.alterEgo&lt;/td&gt;
+      &lt;td&gt;hero.location&lt;/td&gt;
+      &lt;td&gt;hero.mainPower&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;span <span class="font-bold text-red-500">class="text-sm font-bold italic"</span>&gt;*very very frightning&lt;/span&gt;
+&lt;/section&gt;
+        </code> 
+      }
+      @else {
+        <code class="text-wrap">
+&lt;section&gt;
+  &lt;h1&gt;My super cool site&lt;/h1&gt;
+  &lt;p&gt;
+Hi, my name is Andrew. Welcome to my super cool website! Here is a list of all my favourite superheroes:
+  &lt;/p&gt;
+  &lt;ul&gt;
+    #Loop through all heroes.
+    &lt;li&gt;hero.name&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;See below to learn a little more about each one.&lt;/p&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Hero&lt;/th&gt;
+      &lt;th&gt;Alter ego&lt;/th&gt;
+      &lt;th&gt;Location&lt;/th&gt;
+      &lt;th&gt;Main power&lt;/th&gt;
+    &lt;/tr&gt;
+    # Loop thorugh all heros
+    &lt;tr&gt;
+      &lt;td&gt;hero.name&lt;/td&gt;
+      &lt;td&gt;hero.alterEgo&lt;/td&gt;
+      &lt;td&gt;hero.location&lt;/td&gt;
+      &lt;td&gt;hero.mainPower&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;span&gt;*very very frightning&lt;/span&gt;
+&lt;/section&gt;
+        </code> 
+      }
+        </pre>
+  </div>
+  <div class="content-center">
+    <section class="w-ful h-1/2">
+      <section class="flex h-8 flex-row gap-2">
+        <div
+          class="flex w-1/4 items-center rounded-t-lg bg-slate-500 px-2 shadow-2xl"
+        >
+          <span class="overflow-hidden text-ellipsis text-nowrap">
+            My super cool site
+          </span>
+          <span class="ml-auto">x</span>
+        </div>
+        <div
+          class="flex w-1/4 items-center rounded-t-lg bg-slate-500 px-2 shadow-2xl"
+        >
+          <span class="overflow-hidden text-ellipsis text-nowrap">
+            Funny cat videos
+          </span>
+          <span class="ml-auto">x</span>
+        </div>
+        <div
+          class="flex w-1/4 items-center rounded-t-lg bg-slate-500 px-2 shadow-2xl"
+        >
+          <span class="overflow-hidden text-ellipsis text-nowrap">
+            I spent way too long on this demo
+          </span>
+          <span class="ml-auto">x</span>
+        </div>
+      </section>
+      <section
+        class="h-full overflow-y-auto rounded-b-lg rounded-r-lg bg-white text-black shadow-2xl"
+        [ngClass]="{ 'flex flex-col gap-8 p-4': showTailwindStyles() }"
+      >
+        <h1 [ngClass]="{ 'text-xl font-bold': showTailwindStyles() }">
+          My super cool site
+        </h1>
+        <p>
+          Hi, my name is Andrew. Welcome to my super cool website! Here is a
+          list of all my favourite superheroes:
+        </p>
+        <ul [ngClass]="{ 'list-disc pl-8': showTailwindStyles() }">
+          @for (hero of heroes(); track $index) {
+            <li>{{ hero.name }}</li>
+          }
+        </ul>
+        <p>See below to learn a little more about each one.</p>
+        <table [ngClass]="{ 'text-left': showTailwindStyles() }">
+          <tr>
+            <th>Hero</th>
+            <th>Alter ego</th>
+            <th>Location</th>
+            <th>Main power</th>
+          </tr>
+
+          @for (hero of heroes(); track $index) {
+            <tr
+              [ngClass]="{
+                'odd:bg-slate-400 odd:text-white': showTailwindStyles(),
+              }"
+            >
+              <td>{{ hero.name }}</td>
+              <td>{{ hero.alterEgo }}</td>
+              <td>{{ hero.location }}</td>
+              <td>{{ hero.mainPower }}</td>
+            </tr>
+          }
+        </table>
+
+        <span [ngClass]="{ 'text-sm font-bold italic': showTailwindStyles() }"
+          >*very very frightning</span
+        >
+      </section>
+
+      <form class="pt-12">
+        <label class="inline-flex cursor-pointer items-center">
+          <input
+            type="checkbox"
+            class="cursor-pointer"
+            (change)="checkboxToggled()"
+          />
+          <span class="ms-3 text-sm font-medium">Style me!</span>
+        </label>
+      </form>
+    </section>
+  </div>
+</div>
