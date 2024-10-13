@@ -6,7 +6,6 @@ import {
 import { register } from 'swiper/element/bundle';
 import { TitleSlideComponent } from './slides/title-slide/title-slide.component';
 import { ContentsComponent } from './slides/contents/contents.component';
-import { CustomThemeComponent } from './slides/custom-theme/custom-theme.component';
 import { AboutMeComponent } from './slides/about-me/about-me.component';
 import { PseudoClassesComponent } from './slides/pseudo-classes/pseudo-classes.component';
 import { AboutTailwindComponent } from './slides/about-tailwind/about-tailwind.component';
@@ -19,7 +18,6 @@ import { TailwindBasicsComponent } from './slides/tailwind-basics/tailwind-basic
   imports: [
     TitleSlideComponent,
     ContentsComponent,
-    CustomThemeComponent,
     AboutMeComponent,
     PseudoClassesComponent,
     AboutTailwindComponent,
