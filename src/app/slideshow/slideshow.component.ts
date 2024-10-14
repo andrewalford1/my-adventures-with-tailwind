@@ -11,6 +11,7 @@ import { AboutTailwindComponent } from './slides/about-tailwind/about-tailwind.c
 import { CreditsComponent } from './slides/credits/credits.component';
 import { TailwindBasicsComponent } from './slides/tailwind-basics/tailwind-basics.component';
 import { TopTipsComponent } from './slides/top-tips/top-tips.component';
+import { CustomStylingComponent } from './slides/custom-styling/custom-styling.component';
 
 @Component({
   selector: 'app-slideshow',
@@ -23,6 +24,7 @@ import { TopTipsComponent } from './slides/top-tips/top-tips.component';
     CreditsComponent,
     TailwindBasicsComponent,
     TopTipsComponent,
+    CustomStylingComponent,
   ],
   templateUrl: './slideshow.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
